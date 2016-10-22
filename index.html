@@ -1,147 +1,147 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>StormBNC</title>
-<style type="text/css" media="screen">
-body { background: #333; font-family: Verdana, sans-serif; font-size: 11pt; }
-#page { background: #fff; margin: 50px; border: 2px solid #ccc; padding: 10px; }
-#header { background: #555; text-align: center; padding: 10px; color: #fff; }
-#header h1 { color: #fff; }
-#body { padding: 10px; }
-span.tt { font-family: monospace; }
-span.bold { font-weight: bold; }
-a:link,a,a:visited { text-decoration: none; font-weight: bold; color: #fc0; }
-a:active, a:hover { text-decoration: none; font-weight: bold; color: #cc0; }
-</style>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<title>StormBNC</title>
+	<style media="screen" type="text/css">
+	      body { background: #333; font-family: Verdana, sans-serif; font-size: 11pt; }
+	      #page { background: #fff; margin: 50px; border: 2px solid #ccc; padding: 10px; }
+	      #header { background: #555; text-align: center; padding: 10px; color: #fff; }
+	      #header h1 { color: #fff; }
+	      #body { padding: 10px; }
+	      span.tt { font-family: monospace; }
+	      span.bold { font-weight: bold; }
+	      a:link,a,a:visited { text-decoration: none; font-weight: bold; color: #fc0; }
+	      a:active, a:hover { text-decoration: none; font-weight: bold; color: #cc0; }
+	</style>
 </head>
 <body>
-<div id="page">
- <div id="header">
- <h1>Welcome to StormBNC!</h1>
- </div>
- <div id="body">
-<center>
-  <h1>
-Connection address has changed!<br>
-Connect your clients to <b>bnc.stormbit.net:5050 via SSL</b><br>Non-SSL Connections will be refused soon!<br>
-<a href="https://bnc.stormbit.net/controlpanel/">Control Panel</a>
- ~ <a href="https://bnc.stormbit.net/client/">Web Client</a>
- </div>
-</div>
-
-<div id="page">
- <div id="header">
-<h1>Rules</h1>
-</div>
-
- <div id="body">
-<h3>Failure to comply may result in permanent barring from services.</h3>
-<ol>
-<li>No temporary mail providers.</li>
-<li>No spamming, flooding, or botting in any capacity.</li>
-<li>Do not hassle the BNC admins about approving your request. They can deny it.</li>
-<li>Do not PM the BNC admins. Use the request bot.</li>
-<li>One account per person.</li>
-</ol>
-<h3>Forbidden Networks</h3>
-<ul>
-<li>EFnet</li>
-<li>UnderNet</li>
-<li>QuakeNet</li>
-</ul>
-</div>
-</div>
-
-<div id="page">
- <div id="header">
-<h1>Help and Setup</h1>
-</div>
- <div id="body">
-<h2>Requesting your BNC</h2>
-<ol>
-<li><a href="http://iris.stormbit.net/?nick=BNCGuest.....&amp;channels=stormbnc&amp;prompt=1">Connect to the IRC channel</a> (Advanced users connect to <tt>irc.stormbit.net</tt> and join channel <tt>#stormbnc</tt>)</li>
-<li>Request a BNC by saying <tt>!request &lt;Username&gt; &lt;Email&gt;</tt>
-Note: Using a temporary mail provider is forbidden.</li>
-<li>Wait for us to approve your request. It can take at least an hour.</li>
-</ol>
-<h2>Using your BNC</h2>
-<h3>Configuring Your User</h3>
-<ol>
-<li>To begin configuring your user, navigate to <a href="https://bnc.stormbit.net:5050">https://bnc.stormbit.net:5050</a></li>
-<li>Input your username and password in the login field</li>
-<li>On the right, you will see your available configuration options. Select <tt>Your Settings</tt></li>
-<li>Change your password from the pre-assigned one.</li>
-<li>By default, your nickname, alternate nickname, ident, and Realname are all your ZNC username.</li>
-</ol>
-<h3>Configuring Networks</h3>
-<ol>
-<li>Log in to ZNC’s Webmin interface</li>
-<li>Select <tt>Your Settings</tt></li>
-<li>Under Networks, select the <tt>Add</tt> link</li>
-<li>Under Network Name, you may name it anything you like. <strong>Please note that it is case sensitive and must be typed exactly when you are logging in to a multi-network user.</strong></li>
-<li>Specify your nickname, alternative nickname, Ident, and Realname if you would like them different from the previously configured ones</li>
-<li>Under the servers section, specify which IRC servers you would like to connect to. Note: they must belong to the same IRC network.</li>
-<li>Scroll down to Modules. <tt>chansaver</tt>, <tt>highlightattach</tt>, <tt>nickserv/q</tt>, and <tt>route_replies</tt> are recommended but not necessary.</li>
-<li>Select the “Add Network” button the bottom of the page and your ZNC user will connect to the specified IRC server.</li>
-</ol>
-<h3>Configuring Your Client</h3>
-<p>Due to the differences between IRC clients, not every client will have setup instructions.</p>
-<h4>Setting up mIRC with ZNC:</h4>
-<ol>
-<li>
-<p>To connect once, simply use the format /server <a href="http://bnc.stormbit.net">bnc.stormbit.net</a> +5050 username/network:password</p>
-<pre><tt> /server bnc.stormbit.net +5050 newuser/StormBit:password
+	<div id="page">
+		<div id="header">
+			<h1>Welcome to StormBNC!</h1>
+		</div>
+		<div id="body">
+			<center>
+				<h1>Connection address has changed!<br>
+				Connect your clients to <b>bnc.stormbit.net:5050 via SSL</b><br>
+				Non-SSL Connections will be refused soon!<br>
+				<a href="https://bnc.stormbit.net/controlpanel/">Control Panel</a> ~ <a href="https://bnc.stormbit.net/client/">Web Client</a></h1>
+			</center>
+		</div>
+	</div>
+	<div id="page">
+		<div id="header">
+			<h1>Rules</h1>
+		</div>
+		<div id="body">
+			<h3>Failure to comply may result in permanent barring from services.</h3>
+			<ol>
+				<li>No temporary mail providers.</li>
+				<li>No spamming, flooding, or botting in any capacity.</li>
+				<li>Do not hassle the BNC admins about approving your request. They can deny it.</li>
+				<li>Do not PM the BNC admins. Use the request bot.</li>
+				<li>One account per person.</li>
+			</ol>
+			<h3>Forbidden Networks</h3>
+			<ul>
+				<li>EFnet</li>
+				<li>UnderNet</li>
+				<li>QuakeNet</li>
+			</ul>
+		</div>
+	</div>
+	<div id="page">
+		<div id="header">
+			<h1>Help and Setup</h1>
+		</div>
+		<div id="body">
+			<h2>Requesting your BNC</h2>
+			<ol>
+				<li>
+					<a href="http://iris.stormbit.net/?nick=BNCGuestC.....&amp;channels=stormbnc&amp;prompt=1">Connect to the IRC channel</a> (Advanced users connect to <tt>irc.stormbit.net</tt> and join channel <tt>#stormbnc</tt>)
+				</li>
+				<li>Request a BNC by saying <tt>!request &lt;Username&gt; &lt;Email&gt;</tt> <i>Note: Using a temporary mail provider is forbidden.</i></li>
+				<li>Wait for us to approve your request. It can take at least an hour.</li>
+			</ol>
+			<h2>Using your BNC</h2>
+			<h3>Configuring Your User</h3>
+			<ol>
+				<li>To begin configuring your user, navigate to <a href="https://bnc.stormbit.net/config/">the configuration interface</a>
+				</li>
+				<li>Input your username and password in the login field</li>
+				<li>On the right, you will see your available configuration options. Select <tt>Your Settings</tt></li>
+				<li>Change your password from the pre-assigned one.</li>
+				<li>By default, your nickname, alternate nickname, ident, and Realname are all your ZNC username.</li>
+			</ol>
+			<h3>Configuring Networks</h3>
+			<ol>
+				<li>Log in to ZNC’s Webmin interface</li>
+				<li>Select <tt>Your Settings</tt></li>
+				<li>Under Networks, select the <tt>Add</tt> link</li>
+				<li>Under Network Name, you may name it anything you like. <strong>Please note that it is case sensitive and must be typed exactly when you are logging in to a multi-network user.</strong></li>
+				<li>Specify your nickname, alternative nickname, Ident, and Realname if you would like them different from the previously configured ones</li>
+				<li>Under the servers section, specify which IRC servers you would like to connect to. Note: they must belong to the same IRC network.</li>
+				<li>Scroll down to Modules. <tt>chansaver</tt>, <tt>highlightattach</tt>, <tt>nickserv/q</tt>, and <tt>route_replies</tt> are recommended but not necessary.</li>
+				<li>Select the “Add Network” button the bottom of the page and your ZNC user will connect to the specified IRC server.</li>
+			</ol>
+			<h3>Configuring Your Client</h3>
+			<p>Due to the differences between IRC clients, not every client will have setup instructions.</p>
+			<h4>Setting up HexChat with ZNC</h4>
+			<ol>
+				<li>Open the Networks List</li>
+				<li>Select Add. After naming the network, select Edit. Use <tt>bnc.stormbit.net/5050</tt></li>
+				<li>Check 'Use SSL for all servers on this network.'<li>
+				<li>Under the Password section, use the following format: `User/Network:Password</li>
+			</ol>
+			<h4>Setting up AndChat with ZNC</h4>
+			<ol>
+				<li>Open AndChat and select the encircled plus button to add a server</li>
+				<li>Under Name, name your ZNC connection.</li>
+				<li>Under Address, input <tt>bnc.stormbit.net</tt></li>
+				<li>Under Port, put 5050 and check the SSL box.</li>
+				<li>Scroll down to Authentication, and select the Set Up button</li>
+				<li>Check the “Use server password” box, and use <tt>User/Network:Password</tt> as the server password</li>
+			</ol>
+			<h4>Setting up Quassel with ZNC</h4>
+			<ol>
+				<li>Select the Networks submenu</li>
+				<li>Select 'Add'</li>
+				<li>Name the network something relevant.</li>
+				<li>Under the network details, select 'Add'</li>
+				<li>Under the server address, enter <tt>bnc.stormbit.net</tt></li>
+				<li>Under Port, put 5050 and check the SSL box.</li>
+				<li>Under the password field, use the format <tt>User/Network:Password</tt></li>
+				<li>Save your changes and connect.</li>
+			</ol>
+			<h4>Setting up LimeChat with ZNC</h4>
+			<ol>
+				<li>Start LimeChat and select New Server</li>
+				<li>Under the server hostname, input <tt>bnc.stormbit.net</tt></li>
+				<li>Scroll to the bottom and select Advanced</li>
+				<li>Under Port, put 5050 and check the SSL box.</li>
+				<li>Under Server Password, use the format <tt>User/Network:Password</tt></li>
+				<li>Select Done and save your changes.</li>
+			</ol>
+			<h4>(Not Recommended) Setting up mIRC with ZNC</h4>
+			<ol>
+				<li>
+					<p>To connect once, simply use the format:
+					<pre><tt>/server bnc.stormbit.net +5050 username/network:password</tt></pre>
+				</li>
+				<li>
+					<p>To make it permanent, press the Tools menu, and select Scripts Editor</p>
+					<p>Use the following format to automatically connect to IRC networks on startup. Put it under the <b>Remotes</b> tab:</p>
+					<pre><tt>on *:START:{
+    server bnc.stormbit.net +5050 user/network1:password
+    server -m bnc.stormbit.net +5050 user/network2:password
+    server -m bnc.stormbit.net +5050 user/network3:password
+    server -m bnc.stormbit.net +5050 user/network4:password
+    server -m bnc.stormbit.net +5050 user/network5:password
+}
 </tt></pre>
-</li>
-<li>
-<p>To make it permanent, press the Tools menu, and select Scripts Editor</p>
-<p>Use the following format to automatically connect to IRC networks on startup under the <b>Remotes</b> tab:</p>
-<pre><tt> on *:START:{
-   server bnc.stormbit.net +5050 user/network1:password
-   server -m bnc.stormbit.net +5050 user/network2:password
-   server -m bnc.stormbit.net +5050 user/network3:password
-   server -m bnc.stormbit.net +5050 user/network4:password
-   server -m bnc.stormbit.net +5050 user/network5:password
- }
-</tt></pre>
-</li>
-</ol>
-<h4>Setting up Quassel with ZNC</h4>
-<ol>
-<li>Select the Networks submenu</li>
-<li>Select 'Add'</li>
-<li>Name the network something you’ll remember.</li>
-<li>Under the network details, select add</li>
-<li>Under the server address, enter <tt>bnc.stormbit.net</tt></li>
-<li>The port will be either <tt>4950</tt> or <tt>5050</tt>. If you use <tt>5050</tt>, check the SSL box.</li>
-<li>Under the password field, use the format <tt>User/Network:Password</tt></li>
-<li>Save your changes and connect</li>
-</ol>
-<h4>Setting up LimeChat with ZNC</h4>
-<ol>
-<li>Start LimeChat and select New Server</li>
-<li>Under the server hostname, input <tt>bnc.stormbit.net</tt></li>
-<li>Scroll to the bottom and select Advanced</li>
-<li>Change the port to either <tt>4950</tt> or <tt>5050</tt>. If you use <tt>5050</tt>, check the SSL box.</li>
-<li>Under Server Password, use the format <tt>User/Network:Password</tt></li>
-<li>Select Done and save your changes.</li>
-</ol>
-<h4>Setting up AndChat with ZNC</h4>
-<ol>
-<li>Open AndChat and select the encircled plus button to add a server</li>
-<li>Under Name, name your ZNC connection.</li>
-<li>Under Address, input <tt>bnc.stormbit.net</tt></li>
-<li>under Port, input either <tt>4950</tt>, or <tt>5050</tt>. If you use <tt>5050</tt>, check the SSL box.</li>
-<li>Scroll down to Authentication, and select the Set Up button</li>
-<li>Check the “Use server password” box, and use <tt>User/Network:Password</tt> as the server password</li>
-</ol>
-<h4>Setting up HexChat with ZNC</h4>
-<ol>
-<li>Open the Networks List</li>
-<li>Select Add. After naming the network, select Edit. Use <tt>bnc.stormbit.net/5050</tt> or <tt>bnc.stormbit.net/4950</tt></li>
-<li>If you use <tt>bnc.stormbit.net/5050</tt>, check both SSL-related boxes</li>
-<li>Under the Password section, use the following format: `User/Network:Password</li>
-</ol>
-</div>
-</div>
+				</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>

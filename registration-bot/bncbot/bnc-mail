@@ -1,0 +1,41 @@
+#!/bin/bash
+#arg1: bnc username
+#arg2: email
+#arg3: 'request' or 'approve'
+#arg4: generated password, only on arg3=approve
+echo "mail send: $1 $2 $3-mail on `date`, sendgrid response below." >> ./logs/mailer.log
+
+if [ $3 == "request" ]; then #bot is sending a 'request received' email.
+	emailsubject='StormBNC Account Request'
+	emailtext="Hi there, ${1}!<br>
+<br>
+Thanks for requesting a BNC with StormBNC! We will send connection details and a temporary password when we approve your account. In the meantime, please <a href='http://bnc.stormbit.net/#rules'>review our rules</a>.<br>
+Thanks for flying StormBNC!<br>
+<br>
+<h4>If you are not requesting a StormBNC account, <a href='http://iris.stormbit.net/?nick=BNCGuest.....&channels=stormbnc&prompt=1'>please notify us immediately!</a></h4>
+"
+elif [ $3 == "approve" ]; then #bot's telling us to mail a temporary password and stuff
+	emailsubject='StormBNC Account Approved! Login and configure ASAP!'
+	emailtext="Hi there, ${1}!<br>
+<br>
+Your StormBNC account was just approved! Here are the login details, and also <a href='http://bnc.stormbit.net/#help'>some helpful tips and links to get you started</a>! <b>You are required to <a href='http://bnc.stormbit.net/#rules'>follow our BNC rules</a> or your account may be locked or deleted.</b><br>
+<br>
+Your BNC username: <tt>${1}</tt><br>
+BNC hostname: <tt>bnc.stormbit.net</tt><br>
+SSL Port: <tt>5050</tt><br>
+Password (Please change this upon logging in!): <tt>${4}</tt><br>
+<a href='https://bnc.stormbit.net/controlpanel/'>BNC configuration interface</a><br>
+<a href='https://bnc.stormbit.net/client/'>BNC webchat interface</a><br>
+<br>
+And again, thanks for flying StormBNC!
+"
+else #...something went very wrong
+	echo "incorrect usage."
+	echo "$0 [USERNAME] [EMAIL] request -- sends 'request submitted' email"
+	echo "$0 [USERNAME] [EMAIL] approve [PASSWORD] -- sends 'request approved' email and login details."
+	exit 1;
+fi
+
+echo $emailtext | mail -a "Content-type: text/html;" -s "${emailsubject}" "$2"
+
+echo "mail send: $1 $2 $3-mail on `date` completed." >> ./logs/mailer.log
